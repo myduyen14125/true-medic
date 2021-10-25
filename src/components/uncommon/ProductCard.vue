@@ -1,26 +1,28 @@
 <template>
   <div class="product-card">
     <div class="image">
-      <img
-      src="https://tiki.vn/tu-van/wp-content/uploads/2016/06/1-thuc-pham-chuc-nang-la-gi-cong-dung.jpg" alt=""/>
+      <img :src="imgLink" />
     </div>
 
     <div class="info">
-        <h4><router-link class="link" to="`product/`+this.post.productID"> Ten san pham </router-link></h4>
-        <img src="../../assets/3dots.png" alt="" class="dots">
-        <div class="price">
-
-        </div>
+      <h4>
+        <router-link class="link" to="`product/`+this.post.productID">{{name}}</router-link>
+      </h4>
+      <img src="../../assets/3dots.png" alt class="dots" />
+      <div class="price"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  methods: { 
-
+  props: {
+    imgLink: String,
+    name: String,
   },
-
+  methods: {
+    created() {},
+  },
 };
 </script>
 
@@ -40,7 +42,8 @@ $blurBlue: #6f88fd;
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.1),
+      0 2px 8px -1px rgba(0, 0, 0, 0.06);
   }
   &:hover img {
     transform: scale(1.08);
@@ -64,18 +67,18 @@ $blurBlue: #6f88fd;
     transition: 0.3s;
   }
 
-  .info{
+  .info {
     display: flex;
     flex-direction: column;
     height: 100%;
     z-index: 3;
     color: #252525;
-    h4{
+    h4 {
       font-size: 20px;
       margin: 0;
       .link {
         font-weight: 700;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: "Josefin Sans", sans-serif;
         color: $deepBlue;
       }
     }
@@ -94,9 +97,8 @@ $blurBlue: #6f88fd;
       transition: 0.3s;
     }
     img.dots {
-        width: 45px;
-        margin: 0 auto;
-
+      width: 45px;
+      margin: 0 auto;
     }
   }
 }

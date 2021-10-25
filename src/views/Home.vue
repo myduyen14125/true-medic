@@ -2,41 +2,59 @@
   <div class="home">
     <div class="container">
       <div class="sort-container">
-        <SortBar/>
+        <SortBar />
         <div class="sort-product">
           <h4 style="text-align:left">Mới phát hành</h4>
           <b-row>
             <b-col>
-              <ProductCard/>
+              <ProductCard
+                imgLink="https://vtv1.mediacdn.vn/zoom/700_438/2021/10/20/vac201021-16347383581222135214676.jpg"
+                name="Vaccine Pfizer"
+              />
             </b-col>
-            <b-col>2 of 3 hehe</b-col>
-            <b-col>3 of 3</b-col>
-            <b-col>3 of 3</b-col>
+            <b-col>
+              <ProductCard
+                imgLink="https://vnvc.vn/wp-content/uploads/2021/01/vac-xin-astrazeneca.jpg"
+                name="Vaccine Astrazeneca"
+              />
+            </b-col>
+            <b-col>
+              <ProductCard
+                imgLink="https://soyte.hungyen.gov.vn/portal/Photos/2021-09/7ad421b84be06efdTQ.jpg"
+                name="Vaccine Sinopharm"
+              />
+            </b-col>
+            <b-col>
+              <ProductCard
+                imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
+                name="Vaccine Nanocovax"
+              />
+            </b-col>
           </b-row>
         </div>
       </div>
 
       <div class="list-product">
         <h4 style="text-align:left">Phổ biến</h4>
-          <b-row>
-            <b-col>
-              <ProductCard/>
-            </b-col>
-            <b-col>2 of 3</b-col>
-            <b-col>3 of 3</b-col>
-            <b-col>3 of 3</b-col>
-          </b-row>
+        <b-row>
+          <b-col>
+            <ProductCard />
+          </b-col>
+          <b-col>2 of 3</b-col>
+          <b-col>3 of 3</b-col>
+          <b-col>3 of 3</b-col>
+        </b-row>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ProductCard from "../components/uncommon/ProductCard.vue"
-import SortBar from "../components/uncommon/SortBar.vue"
+import ProductCard from "../components/uncommon/ProductCard.vue";
+import SortBar from "../components/uncommon/SortBar.vue";
 export default {
   name: "Home",
-  components: { 
+  components: {
     ProductCard,
     SortBar,
   },
@@ -60,7 +78,6 @@ $blurBlue: #6f88fd;
   position: relative;
   color: $deepBlue;
 }
-
 
 .sort-product {
   margin: 50px 0;
