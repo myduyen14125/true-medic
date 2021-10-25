@@ -41,6 +41,13 @@ a {
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0 5px;
+    transition: 0.3s; 
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    &:hover {
+        border-bottom: 1px solid white;
+        color: white;
+    }
 }
 select {
     border: 0; 

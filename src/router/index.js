@@ -28,6 +28,10 @@ const routes = [
     // ]
   },
   {
+    path: '/tracking',
+    component: () => import('../views/Tracking.vue'),
+  }, 
+  {
     path: '/login',
     component: () => import('../views/Login.vue'),
     meta: { layout: 'unauth'}

@@ -17,7 +17,7 @@
             </div>
         </div>
       <div class="col">
-        <h3 class="title">Loại sản phẩm</h3>
+        <h4 class="title">Loại sản phẩm</h4>
         <div class="list-tags">
           <a href="" class="tag" v-for="(tag, index) in tags" :key="index">{{
             tag
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="col">
-        <h3 class="title">Chăm sóc khách hàng</h3>
+        <h4 class="title">Chăm sóc khách hàng</h4>
         <div class="list-tags">
           <a href="" class="tag" v-for="(tag, index) in tags" :key="index">{{
             tag
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="col">
-        <h3 class="title">Loại sản phẩm</h3>
+        <h4 class="title">Loại sản phẩm</h4>
         <div class="list-tags">
           <a href="" class="tag" v-for="(tag, index) in tags" :key="index">{{
             tag
@@ -66,18 +66,21 @@ a {
   color: #8a8fb9;
 }
 .footer {
-  width: 100%;
-  height: 40vh;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  background-color: #eeeffb;
-  color: #8a8fb9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 40vh;
+  background-color: #eeeffb;
+  color: #8a8fb9;
   margin-top: 10vh;
+  padding: 10px 50px;
 }
 .content {
   display: flex;

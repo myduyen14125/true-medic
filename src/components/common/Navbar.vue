@@ -103,9 +103,10 @@ a {
   color: #2c3e50;
   font-weight: 700;
   transition: 0.4s;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid transparent;
   &:hover {
     border-bottom: 5px solid #2c3e50;
+    color: #2c3e50;
   }
 }
 
@@ -116,6 +117,7 @@ a {
   z-index: 100;
   height: 17vh;
   /* box-shadow: 0 4px 6px -2px gray; */
+  background: linear-gradient(180deg, #EAF3FC 0%, rgba(196, 196, 196, 0) 100%);
   margin: 0;
   padding: 3px;
   background-color: white;
