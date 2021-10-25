@@ -1,16 +1,28 @@
 <template>
   <div class="product-detail">
-    <!-- <h1>{{$route.params.id}}</h1> -->
-    <div v-for="product in products" :key="'product'+product.id" >
-      <div v-if="product.id === $route.params.id">
-        <img :src="product.thumbnail" alt="">
-        <div class="container">
+    <div class="container">
+      <p
+        class="bread-crumb"
+        @click="$router.push({
+          path: '/'
+        })"
+      >Trang chủ > Vaccine > Pfizer</p>
+
+      <div class="main-body--wrapper" style="display: flex">
+        <div style="margin-top: 100px; margin-left:-50px">
+          <p class="usecase--header">CÁCH DÙNG</p>
+          <div class="usecase--body">
+            <p>+ Uống 1 viên/ ngày</p>
+            <p>+ Có thể uống 1 viên x 2 lần/ ngày, trong trường hợp hỗ trợ điều trị các bệnh lý liên quan đến rối loạn chuyển hóa.</p>
+            <p>+ Nên dùng thường xuyên</p>
+          </div>
+        </div>
+
+        <div class="product-image--wrapper">
+          <!-- <img :src="img" alt="asdasdasds" /> -->
         </div>
       </div>
-      
     </div>
-    
-    
   </div>
 </template>
 
@@ -19,39 +31,58 @@ export default {
   components: {
   },
   created() {
-    console.log(this.$route.params.id)
+    console.log(this.$route.params.id);
     console.log(this.$route);
   },
   data() {
     return {
       products: [
-        //thumnail,... 
-      ]
-    }
-    
+        //thumnail,...
+      ],
+    };
   },
-  computed: {
-  }
-  
+  computed: {},
 };
 </script>
 
 <style scoped>
-.product-detail{
+.product-detail {
   margin: 2rem 0;
 }
-.product-detail img{
-  width: 97.8%; 
-  height: 65vh;
-  object-fit: cover;
+
+.bread-crumb {
+  color: #6389cb;
+  font-size: 20px;
+  border-bottom: 2px solid #6389cb;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-left: -50px;
 }
-.container{
+.bread-crumb:hover {
+  cursor: pointer;
+}
+.usecase--header {
+  font-family: Be Vietnam;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  color: #131212;
+}
+.usecase--body {
+  width: 340px;
+  font-size: 15px;
+  color: #131212;
+}
+.product-image--wrapper {
+  background-image: url("../../public/allipas.svg");
+}
+.container {
   width: 55%;
   text-align: left;
   margin: 50px auto;
 }
 @media screen and (max-width: 992px) {
-  .container{
+  .container {
     width: 75%;
     text-align: left;
     margin: 50px auto;
