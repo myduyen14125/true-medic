@@ -19,8 +19,6 @@ yarn build
 ```
 yarn lint
 ```
-### Ideas for UI
-https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design-(Community)?node-id=2%3A712
 
 #### Deploys
 <!-- https://blog-vue-router.netlify.app -->
