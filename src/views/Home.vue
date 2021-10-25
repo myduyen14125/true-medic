@@ -52,7 +52,11 @@
         <h4 style="text-align:left">Phổ biến</h4>
         <b-row>
           <b-col>
-            <ProductCard />
+            <ProductCard
+                id="nanocovax"
+                imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
+                name="Vaccine Nanocovax"
+              />
           </b-col>
           <b-col>2 of 3</b-col>
           <b-col>3 of 3</b-col>

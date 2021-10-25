@@ -2,6 +2,11 @@
   <div class="product-card" >
     <div class="image">
       <img :src="imgLink" />
+      <div class="list-icon">
+        <div class="icon"><b-icon icon="cart3"></b-icon></div>
+        <div class="icon"><b-icon icon="search"></b-icon></div>
+        <div class="icon"><b-icon icon="heart"></b-icon></div>
+      </div>
     </div>
 
     <div class="info">
@@ -9,7 +14,10 @@
         <router-link class="link" to="`product/`+this.post.productID">{{name}}</router-link>
       </h4>
       <img src="../../assets/3dots.png" alt class="dots" />
-      <div class="price"></div>
+      <div class="price">
+        <span class="current-price">$25.00</span>
+        <span class="origin-price" style="color:red; text-decoration:line-through">$35.00</span>
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +48,8 @@ $blurBlue: #6f88fd;
   cursor: pointer;
   transition: 0.5s ease all;
   overflow: hidden;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1),
+      0 2px 8px -1px rgba(0, 0, 0, 0.06);
 
   &:hover {
     box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.1),
@@ -48,6 +58,10 @@ $blurBlue: #6f88fd;
   &:hover img {
     transform: scale(1.08);
     object-fit: cover;
+  }
+  &:hover .list-icon {
+    top: 38%;
+    z-index: 2;
   }
   .link:hover {
     color: $deepBlue;
@@ -58,6 +72,7 @@ $blurBlue: #6f88fd;
     min-height: 280px;
   }
   img {
+    position: relative;
     display: block;
     z-index: 1;
     width: 100%;
@@ -65,6 +80,33 @@ $blurBlue: #6f88fd;
     border-radius: 10px;
     object-fit: cover;
     transition: 0.3s;
+    
+  }
+  
+  .list-icon {
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: 10px;
+    width: 35px; 
+    transition: 0.4s;     
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: white;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      margin: 5px 0;
+      transition: 0.3s;
+      &:hover {
+        background-color: $deepBlue;
+        color: white;
+      }
+    }
+
   }
 
   .info {
@@ -99,6 +141,12 @@ $blurBlue: #6f88fd;
     img.dots {
       width: 45px;
       margin: 0 auto;
+    }
+    .price {
+      margin: 10px;
+      span {
+        margin: 0 10px;
+      }
     }
   }
 }
