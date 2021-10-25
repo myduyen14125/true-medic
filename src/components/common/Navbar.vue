@@ -128,7 +128,7 @@ a {
   justify-content: center;
   width: 100%;
   text-align: center;
-  padding: 18px 0;
+  padding: 20px 0;
   .icon {
     font-size: 28px;
     margin: 0 20px;
