@@ -18,7 +18,7 @@ const routes = [
     layout: 'defaultLayout'
   },
   {
-    path: '/product/:id',
+    path: '/product/pfizer',
     component: () => import('../views/ProductDetail.vue'),
     // children: [
     //   {

@@ -6,28 +6,39 @@
         <div class="sort-product">
           <h4 style="text-align:left">Mới phát hành</h4>
           <b-row>
-            <b-col>
+            <b-col
+              @click="$router.push({
+                  path: '/product/pfizer'
+                })"
+            >
               <ProductCard
-                imgLink="https://vtv1.mediacdn.vn/zoom/700_438/2021/10/20/vac201021-16347383581222135214676.jpg"
+                id="pfizer"
+                imgLink="http://baochinhphu.vn/Uploaded/duongphuonglien/2021_08_26/IMG_7661.jpg"
                 name="Vaccine Pfizer"
               />
             </b-col>
             <b-col>
               <ProductCard
+                id="astra"
                 imgLink="https://vnvc.vn/wp-content/uploads/2021/01/vac-xin-astrazeneca.jpg"
                 name="Vaccine Astrazeneca"
+                @click="productDirect()"
               />
             </b-col>
             <b-col>
               <ProductCard
+                id="sino"
                 imgLink="https://soyte.hungyen.gov.vn/portal/Photos/2021-09/7ad421b84be06efdTQ.jpg"
                 name="Vaccine Sinopharm"
+                @click="productDirect()"
               />
             </b-col>
             <b-col>
               <ProductCard
+                id="nanocovax"
                 imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
                 name="Vaccine Nanocovax"
+                @click="productDirect()"
               />
             </b-col>
           </b-row>
@@ -60,6 +71,11 @@ export default {
   },
   created() {
     console.log(this.$route);
+  },
+  methods: {
+    productDirect: function () {
+      alert("asdas");
+    },
   },
 };
 </script>
