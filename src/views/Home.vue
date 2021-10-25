@@ -33,12 +33,15 @@
                 @click="productDirect()"
               />
             </b-col>
-            <b-col>
+            <b-col
+              @click="$router.push({
+                  path: '/product/tracking'
+                })"
+            >
               <ProductCard
                 id="nanocovax"
                 imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
                 name="Vaccine Nanocovax"
-                @click="productDirect()"
               />
             </b-col>
           </b-row>

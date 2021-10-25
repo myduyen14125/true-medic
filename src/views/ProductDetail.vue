@@ -19,12 +19,13 @@
         </div>
 
         <div class="product-image--wrapper">
-          <!-- <img :src="img" alt="asdasdasds" /> -->
+          <img src="../assets/360 View-Control.png" alt="asdasdasds" />
         </div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {

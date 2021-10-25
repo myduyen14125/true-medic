@@ -28,7 +28,7 @@ const routes = [
     // ]
   },
   {
-    path: '/tracking',
+    path: '/product/tracking',
     component: () => import('../views/Tracking.vue'),
   }, 
   {
