@@ -58,6 +58,10 @@
           </b-col>
         </b-row>
       </div>
+    <div class="direction">
+      <router-link to="/product/overview">TRƯỚC</router-link>
+      <div class="fa fa-long-arrow-left"></div>
+    </div>
   </div>
 </template>
 
@@ -99,12 +103,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  font-weight: 700; 
+  color: #2C3E50;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  &:hover {
+    color: #3e4e5e;
+  }
+}
 h3 {
   font-weight: 700;
 }
 .product-tracking {
   text-align: left;
   margin: 50px 0;
+  .direction {
+    position: -webkit-sticky;
+    position: sticky;
+    width: fit-content;
+    bottom: 10%;
+    left: 2%;
+    .fa {
+      display: block;
+      font-size: 45px;
+      position: absolute;
+      top: 16px;
+    }
+  }
 }
 
 .bread-crumb {

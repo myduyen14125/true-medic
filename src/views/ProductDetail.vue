@@ -8,7 +8,7 @@
       >Trang chủ > Thực phẩm chức năng > Alipas</h4>
       <div class="container">
         <b-row>
-          <b-col class="col left-col" md="5" sm="12">
+          <b-col class="col first-col" md="4" sm="12">
             <ProductCard
                 id="alipas"
                 imgLink="https://ecogreen.com.vn/image/cache/catalog/sap-moi/sap-n-1-1280x1280.jpg"
@@ -23,40 +23,24 @@
                 <p v-html="product.usage"></p>
             </div>
           </b-col>
-          <b-col class="col right-col" lg="7">
+          <b-col class="col second-col" md="4">
             <div class="box">
-                <h3>THÔNG TIN ĐƠN HÀNG</h3>
-                <div class="user-info" style="display: flex; justify-content: space-between">
-                  <div class="left" style="width: 40%">
-                    <p>Đặt hàng bởi: {{ user.name }}</p>
-                    <p>Địa chỉ: {{ user.address }}</p>
-                    <p>SĐT: {{user.phone }} </p>
-                  </div>
-                  <div class="right" style="width: 55%">
-                    <p>Đặt hàng ngày: {{ user.orderDay }}</p>
-                    <p>Xác nhận đơn hàng ngày: {{ user.confirmDay }}</p>
-                    <p>Mã đơn hàng: {{ user.code }}</p>
-                  </div>
-
-              </div>
+              <h3>THÔNG TIN CHI TIẾT</h3>
+              <p v-html="product.infoDetail"></p>
             </div>
+          </b-col>
 
+          <b-col class="col second-col" md="4">
             <div class="box">
-                <h3>TÌNH TRẠNG ĐƠN HÀNG</h3>
-                <div class="product-info" style="display: flex; justify-content: space-between">
-                  <div class="left timeline" style="width: 40%">
-                    <p>Ngày: {{ product.tracking.time }}</p>
-                    <p>Tình trạng: {{ product.tracking.status }}</p>
-                  </div>
-                  <div class="right" style="width: 55%">
-                    <p>Địa điểm: {{ product.tracking.place }}</p>
-                  </div>
-                  
-              </div>
+              <h3>ĐÁNH GIÁ & NHẬN XÉT</h3>
+              <img src="../assets/feedback.png" alt="">
             </div>
-
           </b-col>
         </b-row>
+      </div>
+      <div class="direction">
+        <router-link to="/product/overview">TRƯỚC</router-link>
+        <div class="fa fa-long-arrow-left"></div>
       </div>
   </div>
 </template>
@@ -75,11 +59,7 @@ export default {
         name: 'ALIPAS V30Q',
         description: 'Nam giới trên 18 tuổi. Người mong nâng cao sinh lực, cải thiện chức năng và phong độ nam giới, nâng cao sức khoẻ toàn thân',
         usage: '+ Uống 1 viên/ ngày <br>+ Có thể uống 1 viên x 2 lần/ ngày, trong trường hợp hỗ trợ điều trị các bệnh lý liên quan đến rối loạn chuyển hóa. <br> + Nên dùng thường xuyên',
-        tracking: {
-          time: '4/6/2021',
-          status: 'Đã xác nhận',
-          place: 'Sản xuất tại:  St. Paul Brands - 11842 Monarch Street, Garden Grove, CA 92841, U.S.A.',
-        },
+        infoDetail: 'Đóng gói: Chai 30 viên<br><br>Bảo quản: Nơi khô ráo, thoáng mát, nhiệt độ dưới 30 độ C, tránh ẩm và ánh nắng mặt trời, để xa tầm tay trẻ em.<br><br>Thông tin về công dụng sản phẩm công bố theo giấy phép SĐK: 8545/2020/ĐKSP.<br><br>Nhà sản xuất: St. Paul Brands - 11842 Monarch Street, Garden Grove, CA 92841, U.S.A.<br><br>Nhập khẩu và phân phối: Công ty cổ phần Dược phẩm ECO<br><br>Địa chỉ: 148 Hoàng Hoa Thám, P.12, Q. Tân Bình, TP. Hồ Chí Minh.<br><br>Trụ sở chính: Số 180 Trường Chinh, phường Khương Thượng, quận Đống Đa, TP. Hà Nội'
       },
       user: {
         name: 'Lê Hồng Hải',
@@ -99,12 +79,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  font-weight: 700; 
+  color: #2C3E50;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  &:hover {
+    color: #3e4e5e;
+  }
+}
 h3 {
   font-weight: 700;
 }
 .product-tracking {
   text-align: left;
   margin: 50px 0;
+  position: relative;
+  .direction {
+    position: -webkit-sticky;
+    position: sticky;
+    width: fit-content;
+    bottom: 10%;
+    left: 2%;
+    .fa {
+      display: block;
+      font-size: 45px;
+      position: absolute;
+      top: 16px;
+    }
+  }
 }
 
 .bread-crumb {
@@ -118,12 +122,12 @@ h3 {
     cursor: pointer;
     }
 }
-.left-col {
-  width: 35%;
+.first-col {
+  width: 30%;
 }
-.right-col {
-  margin: 3vw 2vw;
-  width: 60%;
+.second-col {
+  margin: 2vw;
+  width: 30%;
   .user-info {
     margin: 20px 0;
   } 
@@ -132,6 +136,11 @@ h3 {
   } 
   p {
     margin: 0;
+  }
+  img {
+    margin: 0;
+    width: 95%;
+    cursor: pointer;
   }
 }
 

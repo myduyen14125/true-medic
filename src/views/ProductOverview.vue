@@ -21,21 +21,17 @@
           <p v-html="product.usage"></p>
         </div>
 
-        <div class="direction">
-          <router-link to="/product/tracking"> SAU</router-link>
-          <div class="fa fa-long-arrow-right"></div>
-        </div>
-
         <nav>
           <router-link class="green" to="/">THÊM VÀO GIỎ HÀNG</router-link>
           <router-link class="red" to="/product/tracking">MUA NGAY</router-link>
           <router-link class="green" to="/product/detail">XEM CHI TIẾT</router-link>
         </nav>
       </div>
-      
+    <div class="direction">
+        <router-link to="/product/detail"> SAU</router-link>
+        <div class="fa fa-long-arrow-right"></div>
+      </div> 
     </div>
-
-
 </template>
 
 
@@ -73,10 +69,28 @@ a {
   color: #2C3E50;
   margin: 10px 0;
   font-size: 1.1rem;
+  transition: 0.3s;
+  &:hover {
+    color: #3e4e5e;
+  }
 }
 .product-overview {
   text-align: left;
   margin: 50px 0;
+  position: relative;
+  .direction {
+    position: -webkit-sticky;
+    position: sticky;
+    width: fit-content;
+    bottom: 10%;
+    left: 2%;
+    .fa {
+      display: block;
+      font-size: 39px;
+      position: absolute;
+      top: 16px;
+    }
+  }
 }
 
 .bread-crumb {
@@ -116,19 +130,6 @@ a {
     width: 20%;
   }
 
-  .direction {
-    position: relative;
-    position: absolute;
-    width: fit-content;
-    bottom: 10%;
-    left: -70px;
-    .fa {
-      display: block;
-      font-size: 39px;
-      position: absolute;
-      top: 16px;
-    }
-  }
   nav {
     a {
       display: inline-block;
