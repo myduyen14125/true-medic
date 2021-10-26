@@ -18,23 +18,21 @@ const routes = [
     layout: 'defaultLayout'
   },
   {
-    path: '/product/pfizer',
-    component: () => import('../views/ProductDetail.vue'),
-    // children: [
-    //   {
-    //     path: 'detail',
-    //     component: () => import('')
-    //   }
-    // ]
+    path: '/product/overview',
+    component: () => import('../views/ProductOverview.vue'),
   },
+  {
+    path: '/product/detail',
+    component: () => import('../views/ProductDetail.vue'),
+  },
+  {
+    path: '/product/tracking',
+    component: () => import('../views/ProductTracking.vue'),
+  }, 
   // {
   //   path: '/product/tracking/:id',
   //   component: () => import('../views/ProductDetail.vue'),
   // },
-  {
-    path: '/product/tracking',
-    component: () => import('../views/Tracking.vue'),
-  }, 
   {
     path: '/login',
     component: () => import('../views/Login.vue'),

@@ -111,8 +111,8 @@ a {
 }
 
 .nav {
-  position: -webkit-sticky;
-  position: sticky;
+  // position: -webkit-sticky;
+  // position: sticky;
   top: 0;
   z-index: 100;
   height: 17vh;

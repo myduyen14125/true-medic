@@ -119,7 +119,7 @@ a {
     text-align: left;
     margin: 0 70px;
     input {
-        padding: 7px 10px;
+        padding: 6.5px 10px;
         margin: 0 auto;
         border-radius: 3px;
         transition: all .5s ease-in-out;
@@ -138,7 +138,7 @@ a {
         cursor: pointer;
         background: #FB2E86;
         border-radius: 3px;
-        padding: 10px 25px;
+        padding: 12px 25px 10px;
         color: #fff;
         font-size: 12px;
         line-height: 1.5;

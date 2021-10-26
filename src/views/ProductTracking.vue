@@ -5,7 +5,7 @@
         @click="$router.push({
           path: '/'
         })"
-      >Trang chủ > Vaccine > Pfizer</h4>
+      >Trang chủ > Thực phẩm chức năng > Alipas</h4>
       <div class="container">
         <b-row>
           <b-col class="col left-col" md="5" sm="12">
@@ -15,22 +15,16 @@
                 name="Alipas"
             />
             <div class="box">
-              <div class="title">
                 <h3>{{ product.name }}</h3>
                 <p>{{ product.description }}</p>
-              </div>
             </div>
             <div class="box">
-              <div class="title">
                 <h3>CÁCH DÙNG</h3>
                 <p v-html="product.usage"></p>
-                <p>.</p>
-              </div>
             </div>
           </b-col>
           <b-col class="col right-col" lg="7">
             <div class="box">
-              <div class="title">
                 <h3>THÔNG TIN ĐƠN HÀNG</h3>
                 <div class="user-info" style="display: flex; justify-content: space-between">
                   <div class="left" style="width: 40%">
@@ -44,12 +38,10 @@
                     <p>Mã đơn hàng: {{ user.code }}</p>
                   </div>
 
-                </div>
               </div>
             </div>
 
             <div class="box">
-              <div class="title">
                 <h3>TÌNH TRẠNG ĐƠN HÀNG</h3>
                 <div class="product-info" style="display: flex; justify-content: space-between">
                   <div class="left timeline" style="width: 40%">
@@ -59,9 +51,7 @@
                   <div class="right" style="width: 55%">
                     <p>Địa điểm: {{ product.tracking.place }}</p>
                   </div>
-
-                </div>
-              
+                  
               </div>
             </div>
 

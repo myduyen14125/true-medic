@@ -8,7 +8,7 @@
           <b-row>
             <b-col
               @click="$router.push({
-                  path: '/product/pfizer'
+                  path: '/product/overview'
                 })"
             >
               <ProductCard
