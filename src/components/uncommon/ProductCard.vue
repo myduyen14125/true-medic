@@ -74,7 +74,7 @@ $blurBlue: #6f88fd;
   .image {
     overflow: hidden;
     margin: auto;
-    min-height: 280px;
+    min-height: 300px;
     max-width: 350px;
   }
   img {
