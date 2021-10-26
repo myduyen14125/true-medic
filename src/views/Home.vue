@@ -12,9 +12,9 @@
                 })"
             >
               <ProductCard
-                id="pfizer"
-                imgLink="http://baochinhphu.vn/Uploaded/duongphuonglien/2021_08_26/IMG_7661.jpg"
-                name="Vaccine Pfizer"
+                id="alipas"
+                imgLink="https://ecogreen.com.vn/image/cache/catalog/sap-moi/sap-n-1-1280x1280.jpg"
+                name="Alipas"
               />
             </b-col>
             <b-col>

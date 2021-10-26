@@ -42,17 +42,21 @@ $blurBlue: #6f88fd;
   display: flex;
   flex-direction: column;
   position: relative;
+  
+  text-align: center;
   background-color: #fff;
+
+  margin: 50px 20px;
   min-height: 400px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s ease all;
   overflow: hidden;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.1),
       0 2px 8px -1px rgba(0, 0, 0, 0.06);
 
   &:hover {
-    box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.1),
+    box-shadow: 10px 8px 15px -1px rgba(0, 0, 0, 0.1),
       0 2px 8px -1px rgba(0, 0, 0, 0.06);
   }
   &:hover img {
@@ -69,7 +73,9 @@ $blurBlue: #6f88fd;
 
   .image {
     overflow: hidden;
+    margin: auto;
     min-height: 280px;
+    max-width: 350px;
   }
   img {
     position: relative;

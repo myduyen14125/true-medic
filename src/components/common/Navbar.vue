@@ -144,7 +144,7 @@ a {
   justify-content: center;
   button {
     width: fit-content;
-    height: 49.2px;
+    height: 43.2px;
     display: flex;
     align-items: center;
     border-radius: 25px;
@@ -153,6 +153,7 @@ a {
     border: 1px solid #454545;
     background: transparent;
     margin-left: 10px;
+    padding: 10px;
     transition: 0.3s;
     &:hover {
       color: white;
@@ -172,12 +173,12 @@ a {
 /* Search-bar */
 .search-bar {
   position: relative;
-  width: 600px;
+  width: 40%;
   margin: 0 10%;
   padding: 0;
   display: inline-block;
   input {
-    padding: 13px 13px 13px 50px;
+    padding: 10px 10px 10px 50px;
     border-radius: 25px;
     color: #454545;
     width: 100%;
@@ -194,11 +195,11 @@ a {
   .blue {
     position: absolute;
     top: 0;
-    left: -110px;
+    left: -100px;
     background-color: #6389cb;
     border-radius: 25px;
-    height: 49.2px;
-    width: 150px;
+    height: 43.2px;
+    width: 140px;
 
     display: flex;
     align-items: center;
@@ -216,12 +217,13 @@ a {
   .nav {
     font-size: 1.1rem;
   }
-  .search-bar input {
-    display: none;
-  }
-  .fa-search {
-    position: relative;
+  .search-bar .blue {
+    width: 60px;
     top: 0;
+    left: -15px;
+  }
+  .search-bar .blue span {
+    display: none;
   }
 }
 
