@@ -28,6 +28,10 @@
               <h3>THÔNG TIN CHI TIẾT</h3>
               <p v-html="product.infoDetail"></p>
             </div>
+            <nav>
+              <router-link class="green" to="/">THÊM VÀO GIỎ HÀNG</router-link>
+              <router-link class="red" to="/product/tracking">MUA NGAY</router-link>
+            </nav>
           </b-col>
 
           <b-col class="col second-col" md="4">
@@ -141,6 +145,34 @@ h3 {
     margin: 0;
     width: 95%;
     cursor: pointer;
+  }
+}
+nav {
+  text-align: center;
+  display: block;
+  margin: 40px auto;
+  a {
+    display: block;
+    width: 60%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 18px;
+  }
+  .green {
+    color: white;
+    background-color: #68B539;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  .red {
+    color: white;
+    background-color: red;
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 
