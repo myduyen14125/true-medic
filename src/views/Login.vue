@@ -43,6 +43,7 @@ a:hover{
   padding: 1rem;
   text-align: center;
   box-shadow: 5px 5px 13px -4px rgba(0,0,0,0.71);
+  border-radius: 5px;
 }
 input{
   display: block;

@@ -25,7 +25,7 @@ export default ({
 }
 .logo{
   position: absolute;
-  top: 5px;
-  left: 20px;
+  top: 30px;
+  left: 10px;
 }
 </style>
