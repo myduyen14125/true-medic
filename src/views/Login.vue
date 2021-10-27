@@ -1,24 +1,24 @@
 <template>
   <div class="login-container">
-    <h1>Welcome back!</h1>
-    <p>Sign in to get the most out of nuntimum.</p>
+    <h1 style="font-wieght: 700;">ĐĂNG NHẬP</h1>
+    <p>Chào mững bạn đã quay lại với True Medic !</p>
     <form action=""  v-on:submit.prevent="$router.push({
       path: '/dashboard'
     })">
-    <input type="text" placeholder="Username" required>
-    <input type="password" placeholder="Password" required>
+    <input type="text" placeholder="Tên đăng nhập" required>
+    <input type="password" placeholder="Mật khẩu" required>
     <div class="more">
       <div class="remember-me">
         <input type="checkbox">
-        <span>Remember me</span>
+        <span>Lưu tài khoản</span>
       </div>
-      <a href="#">Forget Password?</a>
+      <a href="#">Quên mật khẩu?</a>
     </div>
-    <button>Login</button>
+    <button>Đăng nhập</button>
   </form>
   <div class="need-account">
-    <p>Don't have an account? </p>
-    <router-link to="/signup">Sign up here</router-link>
+    <p>Bạn chưa có tài khoản? </p>
+    <router-link to="/signup">Đăng ký tại đây</router-link>
   </div>
     
   </div>
@@ -27,15 +27,16 @@
 
 <style scoped>
 a{
-  color: #2c3e50;
+  color: #151875;
   border-bottom: 1px solid white;
   transition: 0.4s;
+  padding-bottom: 0px;
 }
 a:active{
-  color: #1e2731;
+  color: #6389CB;
 }
 a:hover{
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid #151875;
 }
 
 .login-container{
@@ -43,37 +44,40 @@ a:hover{
   padding: 1rem;
   text-align: center;
   box-shadow: 5px 5px 13px -4px rgba(0,0,0,0.71);
-  border-radius: 5px;
+  border-radius: 25px;
+  background: white;
+  color: #151875;
 }
 input{
   display: block;
   padding: 20px;
   border-radius: 10px;
   background-color: #f3f3f3;
-  color: #2c3e50;
+  color: #151875;
   width: 100%;
   margin: 20px auto;
   border: none;
   box-sizing: border-box;
   transition: 0.4s;
   border: 1px solid white;
+  outline: none;
 }
 input:hover{
-  border: 1px solid gray;
+  border: 1px solid #6389CB;
 }
 button{
   width: 100%;
   padding: 15px;
   font-size: 1.15rem;
   border-radius: 10px;
-  border: 1px solid #1e2731;
-  color: #2c3e50;
+  border: 1px solid #6389CB;
+  color: #151875;
   margin: 20px auto;
   transition: 0.4s;
   cursor: pointer;
 }
 button:hover{
-  background-color: #1e2731;
+  background-color: #6389CB;
   color: white;
 }
 .more{
@@ -93,7 +97,6 @@ input[type="checkbox"]{
 }
 .need-account{
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 

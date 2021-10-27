@@ -18,6 +18,7 @@ export default ({
 .unauth-layout{
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(180deg, #e2eefa 0%, rgba(196, 196, 196, 0) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +26,9 @@ export default ({
 }
 .logo{
   position: absolute;
-  top: 30px;
-  left: 10px;
+  top: 15px;
+  left: 0px;
+  color: #6389CB;
+  padding: 10px;
 }
 </style>

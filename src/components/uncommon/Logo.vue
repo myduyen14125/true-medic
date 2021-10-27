@@ -24,12 +24,12 @@
   background-color: white;
   color: #6389CB;
   position: relative;
-  top: -15.5px;
+  top: -5.5px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   width: 40px;
-  height: 30px;
+  height: 35px;
   margin: 0px;
 }
 </style>
