@@ -38,6 +38,7 @@ $deepBlue: #6389cb;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
+  line-height: 16px;
 }
 a {
   color: white;
@@ -50,10 +51,6 @@ a {
     border-bottom: 1px solid white;
     color: white;
   }
-}
-.logo {
-  position: relative;
-  top: 6px;
 }
 select {
   border: 0;

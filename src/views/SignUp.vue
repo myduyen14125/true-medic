@@ -14,18 +14,22 @@
         </div>
         <a href="#">Cần sự giúp đỡ?</a>
       </div>
+    <button class="login-google">
+      <img src="../assets/Google_Logo.svg.png" alt="">
+      <span>Đăng nhập với Google</span>
+    </button>
     <button>Đăng ký</button>
     </form>
     <div class="need-account">
       <p>Bạn đã có tài khoản? </p>
-      <router-link to="/signup">Đăng nhập tại đây</router-link>
+      <router-link to="/login">Đăng nhập tại đây</router-link>
     </div>
     
   </div>
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 a{
   color: #151875;
   border-bottom: 1px solid white;
@@ -51,7 +55,7 @@ a:hover{
 input{
   display: block;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #f3f3f3;
   color: #151875;
   width: 100%;
@@ -69,10 +73,10 @@ button{
   width: 100%;
   padding: 15px;
   font-size: 1.15rem;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid #6389CB;
   color: #151875;
-  margin: 20px auto;
+  margin: 8px auto;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -99,5 +103,14 @@ input[type="checkbox"]{
   display: flex;
   justify-content: space-between;
 }
-
+.login-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 18px;
+    height: 20px;
+    margin: 0 10px;
+  }
+}
 </style>
