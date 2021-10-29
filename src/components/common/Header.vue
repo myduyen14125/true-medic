@@ -17,6 +17,7 @@
         <router-link to="/signup">Đăng ký</router-link>
       </div>
       <div v-else class="login-block">
+        <span>{{ username }}</span>
         <router-link to="/login">Đăng xuất</router-link>
       </div>
     </div>
@@ -29,15 +30,25 @@ export default {
   components: {
     Logo,
   },
+  data() {
+    return {
+      username: null,
+    };
+  },
   computed: {
     isLogin() {
-      return this.$store.state.isLogin
-    }
+      return this.$store.state.isLogin;
+    },
+  },
+  async mounted() {
+    const googleUser = await this.$gAuth.signIn();
+    this.username = googleUser.getBasicProfile().Re;
+    console.log("googleUser: ", googleUser.getBasicProfile().Re)
   },
 };
 </script>
 
-<style lang="scss" scoped >
+<style lang="scss" scoped>
 $deepBlue: #6389cb;
 * {
   color: white;
