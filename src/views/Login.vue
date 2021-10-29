@@ -29,7 +29,6 @@
       <p>Bạn chưa có tài khoản?</p>
       <router-link to="/signup">Đăng ký tại đây</router-link>
     </div>
-    {{isLogin}}
   </div>
 </template>
 
