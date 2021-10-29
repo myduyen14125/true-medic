@@ -17,8 +17,7 @@
         <router-link to="/signup">Đăng ký</router-link>
       </div>
       <div v-else class="login-block">
-        <span>{{ username }}</span>
-        <router-link to="/login">Đăng xuất</router-link>
+        <span @click="logOut()">Đăng xuất</span>
       </div>
     </div>
   </div>
@@ -40,11 +39,17 @@ export default {
       return this.$store.state.isLogin;
     },
   },
-  async mounted() {
-    const googleUser = await this.$gAuth.signIn();
-    this.username = googleUser.getBasicProfile().Re;
-    console.log("googleUser: ", googleUser.getBasicProfile().Re)
+  methods: {
+    async logOut() {
+      this.$store.state.isLogin = false; 
+      const result = await this.$gAuth.signOut();
+      this.$router.push({
+          path: "/",
+      });
+      console.log(result)
+    }
   },
+  
 };
 </script>
 
@@ -108,6 +113,14 @@ select {
   justify-content: center;
   text-align: center;
   margin-top: 6px;
+  span {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    &:hover {
+      border-bottom: 1px solid white;
+      color: white;
+    }
+  }
 }
 .left-header {
   display: flex;

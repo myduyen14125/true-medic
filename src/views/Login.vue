@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
-import "firebase/auth";
+// import firebase from "firebase/app";
+// import "firebase/auth";
 
 export default {
   name: "Login",
@@ -63,21 +63,21 @@ export default {
       }
     },
     //use firebase here
-    signIn() {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          this.$router.push({ path: "/" });
-          this.error = false;
-          this.errorMessage = "";
-          console.log(firebase.auth().currentUser.uid);
-        })
-        .catch((err) => {
-          this.error = true;
-          this.errorMessage = err.message;
-        });
-    }
+    // signIn() {
+    //   firebase
+    //     .auth()
+    //     .signInWithEmailAndPassword(this.email, this.password)
+    //     .then(() => {
+    //       this.$router.push({ path: "/" });
+    //       this.error = false;
+    //       this.errorMessage = "";
+    //       console.log(firebase.auth().currentUser.uid);
+    //     })
+    //     .catch((err) => {
+    //       this.error = true;
+    //       this.errorMessage = err.message;
+    //     });
+    // }
   },
 };
 </script>
