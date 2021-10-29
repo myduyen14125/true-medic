@@ -3,13 +3,19 @@ import App from './App.vue'
 import router from './router'
 import {store} from './store/store'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+// import "vuetify/dist/vuetify.min.css";
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+// import Vuetify from "vuetify";
+import VueTimeline from "@growthbunker/vuetimeline";
+
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
+// Vue.use(Vuetify)
+Vue.use(VueTimeline)
 
 Vue.config.productionTip = false
 
@@ -27,6 +33,7 @@ export const bus = new Vue();
 new Vue({
   store: store,
   router,
+  // Vuetify,
   render: h => h(App)
 }).$mount('#app')
 

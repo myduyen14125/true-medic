@@ -29,10 +29,10 @@ const routes = [
     path: '/product/tracking',
     component: () => import('../views/ProductTracking.vue'),
   }, 
-  // {
-  //   path: '/product/tracking/:id',
-  //   component: () => import('../views/ProductDetail.vue'),
-  // },
+  {
+    path: '/product/test',
+    component: () => import('../views/Test.vue'),
+  },
   {
     path: '/login',
     component: () => import('../views/Login.vue'),
