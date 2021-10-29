@@ -6,7 +6,7 @@
       action=""
       v-on:submit.prevent="
         $router.push({
-          path: '/dashboard',
+          path: '/',
         })
       "
     >
@@ -23,7 +23,7 @@
         <img src="../assets/Google_Logo.svg.png" alt="" />
         <span>Đăng nhập với Google</span>
       </button>
-      <button>Đăng nhập</button>
+      <button @click.prevent="signIn">ĐĂNG NHẬP</button>
     </form>
     <div class="need-account">
       <p>Bạn chưa có tài khoản?</p>
@@ -33,11 +33,17 @@
 </template>
 
 <script>
+import firebase from "firebase/app";
+import "firebase/auth";
+
 export default {
   name: "Login",
   data() {
     return {
-      
+      email: '',
+      password: '',
+      error: null,
+      errorMessage: '',
     };
   },
   computed: {
@@ -56,6 +62,22 @@ export default {
         });
       }
     },
+    //use firebase here
+    signIn() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(() => {
+          this.$router.push({ path: "/" });
+          this.error = false;
+          this.errorMessage = "";
+          console.log(firebase.auth().currentUser.uid);
+        })
+        .catch((err) => {
+          this.error = true;
+          this.errorMessage = err.message;
+        });
+    }
   },
 };
 </script>
