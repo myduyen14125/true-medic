@@ -13,6 +13,15 @@ Vue.use(BootstrapVueIcons)
 
 Vue.config.productionTip = false
 
+import GAuth from 'vue-google-oauth2'
+const gauthOption = {
+  clientId: '584655299643-3oab6m1cb7tj2ascqunc8eas7to60iue.apps.googleusercontent.com',
+  scope: 'profile email',
+  prompt: 'consent',
+  fetch_basic_profile: true
+}
+Vue.use(GAuth, gauthOption)
+
 export const bus = new Vue();
 
 new Vue({
