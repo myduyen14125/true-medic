@@ -54,6 +54,7 @@ export default {
   methods: {
     async login() {
       const googleUser = await this.$gAuth.signIn();
+      this.$store.state.currentUser.name = googleUser.getBasicProfile().Re;
       console.log("googleUser: ", googleUser.getBasicProfile().Re);
       this.$store.state.isLogin = this.$gAuth.isAuthorized;
       if (this.isLogin) {

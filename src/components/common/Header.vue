@@ -17,7 +17,8 @@
         <router-link to="/signup">Đăng ký</router-link>
       </div>
       <div v-else class="login-block">
-        <span @click="logOut()">Đăng xuất</span>
+        <span>{{ username }}</span>
+        <span @click="logOut()" class="logout">Đăng xuất</span>
       </div>
     </div>
   </div>
@@ -31,23 +32,17 @@ export default {
   },
   data() {
     return {
-      username: null,
     };
   },
   computed: {
     isLogin() {
       return this.$store.state.isLogin;
     },
+    username() {
+      return this.$store.state.currentUser.name;
+    }
   },
   methods: {
-    async logOut() {
-      this.$store.state.isLogin = false; 
-      const result = await this.$gAuth.signOut();
-      this.$router.push({
-          path: "/",
-      });
-      console.log(result)
-    }
   },
   
 };
@@ -116,10 +111,14 @@ select {
   span {
     border-bottom: 1px solid transparent;
     padding-bottom: 3px;
+    margin: 0 5px;
     &:hover {
       border-bottom: 1px solid white;
       color: white;
     }
+  }
+  .logout {
+    cursor: pointer;
   }
 }
 .left-header {
