@@ -5,6 +5,6 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        //Data here
+        isLogin: false,
     }
 })

@@ -12,9 +12,12 @@
         Danh sách ước
         <b-icon-heart-fill class="heart"></b-icon-heart-fill>
       </router-link>
-      <div class="login-block">
+      <div v-if="!isLogin" class="login-block">
         <router-link to="/login">Đăng nhập</router-link>|
         <router-link to="/signup">Đăng ký</router-link>
+      </div>
+      <div v-else class="login-block">
+        <router-link to="/login">Đăng xuất</router-link>
       </div>
     </div>
   </div>
@@ -25,6 +28,11 @@ import Logo from "../uncommon/Logo.vue";
 export default {
   components: {
     Logo,
+  },
+  computed: {
+    isLogin() {
+      return this.$store.state.isLogin
+    }
   },
 };
 </script>

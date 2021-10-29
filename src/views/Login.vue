@@ -29,6 +29,7 @@
       <p>Bạn chưa có tài khoản?</p>
       <router-link to="/signup">Đăng ký tại đây</router-link>
     </div>
+    {{isLogin}}
   </div>
 </template>
 
@@ -37,14 +38,19 @@ export default {
   name: "Login",
   data() {
     return {
-      isLogin: false,
+      
     };
+  },
+  computed: {
+    isLogin() {
+      return this.$store.state.isLogin
+    }
   },
   methods: {
     async login() {
       const googleUser = await this.$gAuth.signIn();
       console.log("googleUser: ", googleUser);
-      this.isLogin = this.$gAuth.isAuthorized;
+      this.$store.state.isLogin = this.$gAuth.isAuthorized;
       if (this.isLogin) {
         this.$router.push({
           path: "/",
