@@ -48,7 +48,8 @@
           </div>
 
           <div class="box">
-            <h3>TÌNH TRẠNG ĐƠN HÀNG</h3><br>
+            <h3>TÌNH TRẠNG ĐƠN HÀNG</h3>
+            <br />
             <!-- <div class="product-info" style="display: flex; justify-content: space-between">
                   <div class="left timeline" style="width: 40%">
                     <p>Ngày: {{ product.tracking.time }}</p>
@@ -60,25 +61,25 @@
                   
                 </div> -->
             <!-- //Timeline ne -->
-            <div 
-              class="container timeline border-dark" 
-              v-for="item in productTracking"
-              v-bind:key="'item'+item.time"
+            
+            <div
+              class="container timeline border-dark"
+              v-for="item in productTracking.trackingChain"
+              v-bind:key="'item' + item.time"
             >
+
               <div class="timeline-box">
-                <div class="time-marked" >
-                  {{ item.date }}
+                <div class="time-marked">
+                  {{ item.time }}
                 </div>
                 <div class="job-discription">
-                  <h5>{{ item.distributor }}</h5>
+                  <h5>{{ item.to_name }}</h5>
                   <p>
-                    {{ item.place }}
+                    {{ item.to_address }}
                   </p>
                 </div>
               </div>
-
             </div>
-
           </div>
         </b-col>
       </b-row>
@@ -106,40 +107,42 @@ export default {
         usage:
           "+ Uống 1 viên/ ngày <br>+ Có thể uống 1 viên x 2 lần/ ngày, trong trường hợp hỗ trợ điều trị các bệnh lý liên quan đến rối loạn chuyển hóa. <br> + Nên dùng thường xuyên",
       },
-      productTracking: [
-        {
-          date: "2017-02-26",
-          distributor: "Công ty Dược phẩm và Thương mại Phương Tây",
-          place:
-            "Cụm Công nghiệp Hồng La, Hồng La, thành phố Hải Phòng",
-        },
-        {
-          date: "2016-11-22",
-          distributor: "Công ty cổ phần Traphaco",
-          place:
-            "Cụm Công nghiệp Hạp Lĩnh, phường Hạp Lĩnh, thành phố Bắc Ninh",
-        }, 
-        {
-          date: "2016-09-30",
-          distributor: "Nhà thuốc Hồng Mai",
-          place:
-            "Số 85, phố Hồng Mai, phường Quỳnh Lôi, quận Hai Bà Trưng, thành phố Hà Nội",
-        }, 
-        {
-          date: "2016-07-30",
-          distributor: "Nhà thuốc Minh Phúc",
-          place:
-            "Số 3 ngõ 23 đường Xuân La, phường Xuân La, quận Tây Hồ, thành phố Hà Nội",
-        }, 
-        {
-          date: "2016-05-21",
-          distributor: "Medicine Company",
-          place:
-            "34A West Old Street, Fresno, California, USA",
-        }, 
-        
 
-      ],
+      productTracking: {
+        createdAt: "3-5-2016",
+        trackingChain: [
+          {
+            time: "2021-10-28",
+            from_name: "Công ty Dược phẩm và Thương mại Phương Đông",
+            from_address: "Cụm Công nghiệp Hồng La, Hồng La, thành phố Hải Phòng",
+            to_name: "Công ty cổ phần Traphaco",
+            to_address:
+              "Cụm Công nghiệp Hạp Lĩnh, phường Hạp Lĩnh, thành phố Bắc Ninh",
+          },
+          {
+            time: "2016-09-30",
+            to_name: "Nhà thuốc Hồng Mai",
+            to_address:
+              "Số 85, phố Hồng Mai, phường Quỳnh Lôi, quận Hai Bà Trưng, thành phố Hà Nội",
+          },
+          {
+            time: "2016-07-30",
+            to_name: "Nhà thuốc Minh Phúc",
+            to_address:
+              "Số 3 ngõ 23 đường Xuân La, phường Xuân La, quận Tây Hồ, thành phố Hà Nội",
+          },
+          {
+            time: "2016-05-21",
+            to_name: "Medicine Company",
+            to_address: "34A West Old Street, Fresno, California, USA",
+          },
+          {
+            time: "2016-02-21",
+            to_name: "Headfill Company",
+            to_address: "27B West Old Street, Fresno, Washington, USA",
+          },
+        ],
+      },
       user: {
         name: "Lê Hồng Hải",
         address: "Đà Nẵng, Việt Nam",
@@ -217,7 +220,7 @@ h3 {
 .timeline {
   border-left: 3px solid #2e344e;
   font-size: 1rem;
-  margin: 0px 10px ;
+  margin: 0px 10px;
   text-align: left;
   padding-bottom: 25px;
 }
