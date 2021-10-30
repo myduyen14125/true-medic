@@ -43,6 +43,12 @@ export default {
     }
   },
   methods: {
+    logOut() {
+      this.$store.state.isLogin = false;
+      this.$router.push({
+          path: "/",
+      });
+    }
   },
   
 };

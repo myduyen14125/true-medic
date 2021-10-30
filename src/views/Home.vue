@@ -7,9 +7,11 @@
           <h4 style="text-align:left">Mới phát hành</h4>
           <b-row>
             <b-col
-              @click="$router.push({
-                  path: '/product/overview'
-                })"
+              @click="
+                $router.push({
+                  path: '/product/overview',
+                })
+              "
             >
               <ProductCard
                 id="alipas"
@@ -34,9 +36,11 @@
               />
             </b-col>
             <b-col
-              @click="$router.push({
-                  path: '/product/tracking'
-                })"
+              @click="
+                $router.push({
+                  path: '/product/tracking',
+                })
+              "
             >
               <ProductCard
                 id="nanocovax"
@@ -53,14 +57,94 @@
         <b-row>
           <b-col>
             <ProductCard
-                id="nanocovax"
-                imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
-                name="Vaccine Nanocovax"
-              />
+              id="nanocovax"
+              imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
+              name="Vaccine Nanocovax"
+            />
           </b-col>
-          <b-col>2 of 3</b-col>
-          <b-col>3 of 3</b-col>
-          <b-col>3 of 3</b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://cf.shopee.vn/file/885c804d31a1f7889c5c2df79979def9"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://www.thuocdantoc.org/wp-content/uploads/2020/02/thuc-pham-chua-nang-chua-benh-tri-tan-tri-an.jpg"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://soyte.hungyen.gov.vn/portal/Photos/2021-09/7ad421b84be06efdTQ.jpg"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://vcdn-giadinh.vnecdn.net/2021/08/04/1-z-2-4497-1628046609.jpg"
+              name="Power Sam Energy"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://vcdn-giadinh.vnecdn.net/2021/08/04/1-8-1628049853-1628049866-7623-1628066338.jpg"
+              name="Oyster Man"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://toplist.vn/images/800px/turmeric-800-mg-225607.jpg"
+              name="Turmeric"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://vanchuyensieutoc.com/Uploads/images/tin%20tuc/thuc-pham-chuc-nang-nhat-ban-2.jpg"
+              name="Matcha Sala"
+            />
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://file3.qdnd.vn/data/images/0/2021/08/28/vuongthuy/25082021vthuy32.jpg?dpi=150&quality=100&w=870"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://cf.shopee.vn/file/885c804d31a1f7889c5c2df79979def9"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://www.thuocdantoc.org/wp-content/uploads/2020/02/thuc-pham-chua-nang-chua-benh-tri-tan-tri-an.jpg"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
+          <b-col>
+            <ProductCard
+              id="nanocovax"
+              imgLink="https://soyte.hungyen.gov.vn/portal/Photos/2021-09/7ad421b84be06efdTQ.jpg"
+              name="Vaccine Nanocovax"
+            />
+          </b-col>
         </b-row>
       </div>
     </div>
@@ -80,7 +164,7 @@ export default {
     console.log(this.$route);
   },
   methods: {
-    productDirect: function () {
+    productDirect: function() {
       alert("asdas");
     },
   },
