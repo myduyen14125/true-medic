@@ -109,16 +109,36 @@ export default {
       productTracking: [
         {
           date: "2017-02-26",
-          distributor: "Công ty Dược phẩm và Thương mại Phương Đông",
+          distributor: "Công ty Dược phẩm và Thương mại Phương Tây",
           place:
-            "Cụm Công nghiệp Hạp Lĩnh, phường Hạp Lĩnh, thành phố Bắc Ninh",
+            "Cụm Công nghiệp Hồng La, Hồng La, thành phố Hải Phòng",
         },
         {
           date: "2016-11-22",
           distributor: "Công ty cổ phần Traphaco",
           place:
             "Cụm Công nghiệp Hạp Lĩnh, phường Hạp Lĩnh, thành phố Bắc Ninh",
-        }
+        }, 
+        {
+          date: "2016-09-30",
+          distributor: "Nhà thuốc Hồng Mai",
+          place:
+            "Số 85, phố Hồng Mai, phường Quỳnh Lôi, quận Hai Bà Trưng, thành phố Hà Nội",
+        }, 
+        {
+          date: "2016-07-30",
+          distributor: "Nhà thuốc Minh Phúc",
+          place:
+            "Số 3 ngõ 23 đường Xuân La, phường Xuân La, quận Tây Hồ, thành phố Hà Nội",
+        }, 
+        {
+          date: "2016-05-21",
+          distributor: "Medicine Company",
+          place:
+            "34A West Old Street, Fresno, California, USA",
+        }, 
+        
+
       ],
       user: {
         name: "Lê Hồng Hải",
