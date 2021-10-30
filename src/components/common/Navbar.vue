@@ -9,7 +9,7 @@
       </div>
       <div class="Product-icons">
         <b-icon icon="person-circle" class="icon"></b-icon>
-        <b-icon icon="menu-button-wide" class="icon"></b-icon>
+        <b-icon icon="menu-button-wide" class="icon" @click="toCreateTransaction"></b-icon>
         <b-icon icon="gear" class="icon"></b-icon>
       </div>
     </div>
@@ -37,8 +37,6 @@
         <b-icon-basket3 class="icon"></b-icon-basket3>
       </button>
     </div>
-    <!-- <button @click="$router.go(-1)">Back</button> |
-        <button @click="$router.go(1)">Forward</button> -->
   </div>
 </template>
 
@@ -62,6 +60,9 @@ export default {
     console.log(response.data);
   },
   methods: {
+    toCreateTransaction() {
+      window.location.href = "/createTransaction"
+    },
     getProduct(id) {
       this.$router.push(`/Product/${id}`);
     },
