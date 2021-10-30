@@ -131,16 +131,15 @@ import Web3 from "web3";
   }
 }
 button {
-    width: 20%;
-    padding: 12px;
-    font-size: 1.15rem;
-    border-radius: 15px;
-    border: 1px solid #6389cb;
-    background-color: #abc5f1;
-    color: #151875;
-    margin: 8px auto;
-    transition: 0.4s;
-    cursor: pointer;
+  width: 25%;
+  padding: 15px;
+  font-size: 1.15rem;
+  border-radius: 15px;
+  border: 1px solid #6389cb;
+  color: #151875;
+  margin: 8px auto;
+  transition: 0.4s;
+  cursor: pointer;
     &:hover {
       background-color: #6389cb;
       color: white;
