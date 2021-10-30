@@ -1,4 +1,4 @@
-# Small Blog Project with Vue Router
+# True Medic 
 
 ## Project setup
 ```
