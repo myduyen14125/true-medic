@@ -1,27 +1,28 @@
 <template>
 <form class="container mt-5">
-  <div class="form-group mb-3">
-    <label>Your account address</label>
+  <h3>Tạo giao dịch</h3>
+  <div class="form-group mb-4">
+    <label>*Your account address</label>
     <input type="text" class="form-control" placeholder="Enter your account address" v-model="myAccount">
   </div>
-  <div class="form-group mb-3">
-    <label>Client account address</label>
+  <div class="form-group mb-4">
+    <label>*Client account address</label>
     <input type="text" class="form-control" placeholder="Enter client account address" v-model="clientAccount">
   </div>
-  <div class="form-group mb-3">
-    <label>Private key</label>
+  <div class="form-group mb-4">
+    <label>*Private key</label>
     <input type="password" class="form-control" placeholder="Paste private key here" v-model="privateKey">
   </div>
-  <div class="form-group mb-3">
-    <label>Your shipment id</label>
+  <div class="form-group mb-4">
+    <label>*Your shipment id</label>
     <input type="text" class="form-control" placeholder="Enter shipment id" v-model="shipmentId">
   </div>
   
   <div class="spinner-border text-secondary d-inline-block" role="status" v-if="isSending" >
     <span class="sr-only">Loading...</span>
   </div>
-  <button class="btn btn-primary" v-if="!isSending" @click.prevent="createContract">Send</button>
-  <button class="btn btn-primary" v-if="isSending" disabled>Validating...</button>
+  <button v-if="!isSending" @click.prevent="createContract">Send</button>
+  <button v-if="isSending" disabled>Validating...</button>
   
   <div v-if="successTransaction">You can see transaction detail here: <a :href="`https://ropsten.etherscan.io/tx/${successTransaction}`">link</a></div>
 </form>
@@ -102,6 +103,47 @@ import Web3 from "web3";
   }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.container {
+  width: 600px;
+  box-shadow: 1px 1px 8px -4px rgba(0, 0, 0, 0.71);
+  border-radius: 25px;
+  padding: 40px 40px 20px;
+  color: #151875;
+}
+.form-group {
+  transition: 0.3s;
+  text-align: left;
+  label {
+    transition: 0.4s;
+  }
+  input {
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #151875;
+    outline: none;
+    &:hover {
+      border:1px solid #6389cb;
+    }
+  }
+  &:hover label {
+    transform: scale(1.02);
+  }
+}
+button {
+    width: 20%;
+    padding: 12px;
+    font-size: 1.15rem;
+    border-radius: 15px;
+    border: 1px solid #6389cb;
+    background-color: #abc5f1;
+    color: #151875;
+    margin: 8px auto;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover {
+      background-color: #6389cb;
+      color: white;
+    }
+  }
 </style>
