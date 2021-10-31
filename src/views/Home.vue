@@ -160,9 +160,6 @@ export default {
     ProductCard,
     SortBar,
   },
-  created() {
-    console.log(this.$route);
-  },
   methods: {
     productDirect: function() {
       alert("asdas");

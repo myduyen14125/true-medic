@@ -92,12 +92,26 @@
 </template>
 
 <script>
+import axios from 'axios'
 import ProductCard from "../components/uncommon/ProductCard.vue";
 export default {
   components: {
     ProductCard,
   },
-  created() {},
+  // async created() {
+  //   try {
+  //     const response = await axios.get(`http://35.185.179.119/api/v1/info/shipment/tracking/?shipment=0753b541-0f69-4f96-b1ce-06111817d05f`)
+  //     console.log("response:", response)
+  //   }
+  //   catch(error) {
+  //     console.log("error:", error)
+  //   }
+  // },
+  async created() {
+    const response = await axios.get(`http://35.185.179.119/api/v1/info/shipment/tracking/?shipment=0753b541-0f69-4f96-b1ce-06111817d05f`)
+    this.users = response.data
+    console.log(response.data)
+  },
   data() {
     return {
       product: {

@@ -15,10 +15,9 @@
     </div>
     <div class="bellow-nav">
       <div class="search-bar">
-        <form action="" v-on:submit.prevent="findProducts">
+        <form action="">
           <input
             type="text"
-            v-model="findName"
             placeholder="Find the product's name you want..."
           />
           <div class="blue">
@@ -41,60 +40,17 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   components: {},
   data() {
     return {
-      products: 0,
-      notBeFound: false,
-      listFindProducts: [],
-      tempProducts: [],
     };
-  },
-  async created() {
-    const response = await axios.get(
-      `https://60d94868eec56d001747768f.mockapi.io/v1/Products`
-    );
-    this.Products = response.data;
-    console.log(response.data);
   },
   methods: {
     toCreateTransaction() {
       window.location.href = "/createTransaction"
     },
-    getProduct(id) {
-      this.$router.push(`/Product/${id}`);
-    },
-    async findProducts() {
-      this.tempProducts = this.Products;
-      console.log(this.tempProducts);
-      let count = 0;
-      this.listFindProducts = [];
-      const response = await axios.get(
-        `https://60d94868eec56d001747768f.mockapi.io/v1/Products`
-      );
-
-      for (let i = 0; i < response.data.length; i++) {
-        if (response.data[i].name.includes(this.findName)) {
-          this.listFindProducts[count] = response.data[i];
-          console.log(this.listFindProducts[count]);
-          count++;
-        }
-      }
-      if (count == 0 || this.findName === "") {
-        alert("There is no result!");
-      } else {
-        this.Products = {};
-      }
-      console.log("count = " + count);
-      console.log(this.listFindProducts);
-    },
-    cancelFindProduct() {
-      this.Products = this.tempProducts;
-      console.log(this.tempProducts);
-    },
-  },
+  }
 };
 </script>
 
